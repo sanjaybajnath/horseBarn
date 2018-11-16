@@ -29,13 +29,16 @@ public class HorseBarn {
     }
 
     public String toString(){
-        String list = "[";
+        String list = "";
         for (int i = 0; i< this.spaces.length;i++){
             if (this.spaces[i]!=null){
-                list = list + this.spaces[i].getName() +", ";
+                list = list +"[" + this.spaces[i].getName() +"] ";
+            }
+            else{
+                list = list + "[null] ";
             }
         }
-        return list.substring(0,list.length()-2)+"]";
+        return list;
     }
 
 }
